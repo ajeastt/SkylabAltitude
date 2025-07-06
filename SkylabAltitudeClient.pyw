@@ -98,26 +98,21 @@ class PlaneTrackerApp:
                 p.get("MAGNETIC_COMPASS"),
                 p.get("SIM_ON_GROUND")
             )
-            # Only send if state changed
-            if state != self.last_state:
-                self.last_state = state
-                data = {
-                    'ident_public_key': self.ident_public,
-                    'ident_private_key': self.ident_private,
-                    'current_latitude': state[0],
-                    'current_longitude': state[1],
-                    'current_altitude': state[2],
-                    'current_compass': state[3],
-                    'title': p.get("TITLE").decode('utf-8'),
-                    'atc_id': p.get("ATC_ID").decode('utf-8'),
-                    'on_ground': state[4],
-                    'client_version': client_version
-                }
-                self.session.post(f"{website_address}/api/update_plane_location", json=data, timeout=5)
-                self.stats_label.config(text=f"Updated at {time.strftime('%H:%M:%S')}")
-            else:
-                # Skip send if unchanged
-                self.stats_label.config(text="No change detected")
+            # REMOVE this if/else, always send update
+            data = {
+                'ident_public_key': self.ident_public,
+                'ident_private_key': self.ident_private,
+                'current_latitude': state[0],
+                'current_longitude': state[1],
+                'current_altitude': state[2],
+                'current_compass': state[3],
+                'title': p.get("TITLE").decode('utf-8'),
+                'atc_id': p.get("ATC_ID").decode('utf-8'),
+                'on_ground': state[4],
+                'client_version': client_version
+            }
+            self.session.post(f"{website_address}/api/update_plane_location", json=data, timeout=5)
+            self.stats_label.config(text=f"Updated at {time.strftime('%H:%M:%S')}")
         except Exception as e:
             self.stats_label.config(text=f"Error: {e}")
 
