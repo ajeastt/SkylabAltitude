@@ -8,6 +8,11 @@ A desktop application that streams real-time aircraft data from Microsoft Flight
 
 ---
 
+## Need Help?
+[![Discord](https://discord.gg/V4BvVskxSG)
+
+---
+
 ## 🚀 Features
 
 - **SimConnect Integration**: Reads live sim data (latitude, longitude, altitude, heading, on-ground status)  
