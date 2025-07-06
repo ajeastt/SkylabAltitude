@@ -12,7 +12,7 @@ website_address = "https://aviation.skylabco.cloud"
 class PlaneTrackerApp:
     def __init__(self, master):
         self.master = master
-        master.title("Find My Plane")
+        master.title("SkylabAltitude")
         master.resizable(False, False)
         master.geometry("400x300")
         master.protocol("WM_DELETE_WINDOW", self.on_closing)
