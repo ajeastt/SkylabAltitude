@@ -9,7 +9,7 @@ A desktop application that streams real-time aircraft data from Microsoft Flight
 ---
 
 ## Need Help?
-[![Discord](https://discord.gg/V4BvVskxSG)
+[Discord](https://discord.gg/V4BvVskxSG)
 
 ---
 
