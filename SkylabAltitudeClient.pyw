@@ -72,7 +72,7 @@ class PlaneTrackerApp:
                 self.ident_private = data['ident_private_key']
                 self.server_status.config(text="Connected to server", fg="green")
                 self.ident_label.config(text=self.ident_public)
-                url = f"{website_address}/view/{self.ident_public}"
+                url = f"{website_address}"
                 self.link_label.config(text=url)
                 self.link_label.bind("<Button-1>", lambda e: webbrowser.open_new(url))
                 break
