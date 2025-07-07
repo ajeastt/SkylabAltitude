@@ -40,3 +40,4 @@ A desktop application that streams real-time aircraft data from Microsoft Flight
 - [ ] Add more data to flight details.
 - [ ] Front end UI changes.
 - [ ] Improve mobile device support.
+- [ ] Create a compiled EXE client.
