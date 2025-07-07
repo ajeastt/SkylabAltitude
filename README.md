@@ -39,3 +39,4 @@ A desktop application that streams real-time aircraft data from Microsoft Flight
 - [ ] Clean up lines for aircraft. Currently showing all lines regaurdless if clicked off of a specific aircraft.
 - [ ] Add more data to flight details.
 - [ ] Front end UI changes.
+- [ ] Improve mobile device support.
